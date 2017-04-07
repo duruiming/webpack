@@ -32,6 +32,11 @@ module.exports = {
         loader: ET.extract('style','css')
       },
       {
+         test:/\.(jpg|png)$/,
+         exclude: /node_modules/,
+         loader:"url?limit=5000"
+     },
+      {
         test: /\.scss$/,
         loader: ET.extract('style', 'css!sass')
       },
